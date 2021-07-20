@@ -1,0 +1,79 @@
+@mixin flex($direction, $justify, $align, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+}
+
+html {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+}
+
+html, body, #root {
+    width: 100%;
+    min-width: 750px;
+    height: 100%;
+}
+
+body {
+    padding: 16px 32px;
+    margin: 0;
+    background-image: linear-gradient(to right, #28a745, #28a745);
+    background-clip: content-box, padding-box;
+}
+
+#root {
+    @include flex(row, flex-start, center, wrap);
+    border: 1px solid lightgray;
+}
+
+.noCaret a:after {
+    content: none !important;
+}
+
+i {
+    cursor: pointer;
+    color: #f8f9fa;
+}
+
+.dropdown a:focus {
+    box-shadow: none !important;
+    border-radius: 2px;
+    background-color: rgba(211, 211, 211, .3) !important;
+}
+
+.input-group-text {
+    cursor: pointer;
+    height: 100%;
+    background-color: #6c757d !important;
+    border: none !important;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 16px rgba(211, 211, 211, .9);
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    margin: 0px 4px;
+}

@@ -1,0 +1,72 @@
+.contentWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  background-color: white;
+}
+
+#chatWindow {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 32px 16px;
+  overflow-y: scroll;
+  background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/22/hibiscus-303637_960_720.png");
+  background-size: cover;
+}
+
+.chatMessage {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 75%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 12px;
+  margin-bottom: 40px;
+  font-size: 1.25rem;
+  background-color: #B3DBCA;
+  border-radius: 10px;
+}
+
+.sentMessage {
+  background-color: #E4E3A8;
+  margin-left: auto;
+}
+
+.messageSender {
+  position: absolute;
+  top: -20px;
+  height: 12px;
+  font-size: .75rem;
+  font-weight: bold;
+}
+
+.chatTimestamp {
+  margin-left: 12px;
+  font-size: .75rem;
+  font-weight: 100;
+}
+
+.contentWindow .input-group *:not(i) {
+  border-radius: 0px !important;
+  border: none !important;
+  border-top: 1px solid lightgray !important;
+}
+
+.contentWindow .input-group-text {
+  cursor: pointer;
+  height: 100%;
+  border: none !important;
+}
+/*# sourceMappingURL=ContentWindow.css.map */

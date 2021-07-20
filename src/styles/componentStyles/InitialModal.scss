@@ -1,0 +1,29 @@
+.modalSections {
+    display: flex;
+}
+
+.modalSections .modal-body:first-of-type {
+    border-right: 1px solid lightgray;
+}
+
+.modalSections .modal-body {
+    padding: 24px;
+}
+
+.modalSections .modal-body .modal-title {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.centeredButton {
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.modalButton {
+    width: 50%;
+    margin-top: 10px;
+}
