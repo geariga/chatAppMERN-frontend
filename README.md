@@ -8,4 +8,4 @@
   As I finish up with the back-end, I will continue to make changes to the front.
 </p>
 
-<h5>The back-end is located at: https://github.com/geariga/chatAppMERN</h5>
+<h5>The back-end is located at: https://github.com/geariga/chatAppMERN-backend</h5>
