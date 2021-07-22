@@ -13,18 +13,16 @@ export default function InitialModal(props) {
             displayName: form.elements.username_login.value,
             password: form.elements.password_login.value
         }
-        const response = await axios.post('/api/login', data)
-        const unparsedCurrentToken = localStorage.getItem('wat010203')
-        if (unparsedCurrentToken !== 'null') {
-            const parsedCurrentToken = JSON.parse(unparsedCurrentToken)
+        const responseToken = await axios.post('/api/login', data)
+        const currentToken = JSON.parse(localStorage.getItem('wat010203'))
+        if (currentToken) {
             await axios.post('/api/revoke', {
-                token: parsedCurrentToken.token
+                token: currentToken.token
             })
         }
-        // this value must match the expiration value on the server (accounting for ms to sec)
-        const tokenExpirationInMilliseconds = 259200000/*30000*/
+        const tokenExpirationInMilliseconds = 259200000
         const tokenData = {
-            token: response.data.token,
+            token: responseToken.data.token,
             expiration: new Date().getTime() + tokenExpirationInMilliseconds
         }
         props.setShowModal(() => false)

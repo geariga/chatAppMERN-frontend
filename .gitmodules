@@ -1,4 +1,0 @@
-[submodule "theschedulerMERN"]
-	path = theschedulerMERN
-	url = https://github.com/geariga/theschedulerMERN.git
-	branch = main
