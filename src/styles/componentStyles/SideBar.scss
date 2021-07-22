@@ -18,24 +18,25 @@
     overflow-y: scroll;
 }
 
-.sideBar .list-group .list-group-item {
+.sideBar .list-group .chatroom-li {
     display: flex;
+    align-items: center;
+    min-height: 100px;
     padding-left: 12px !important;
     border-radius: 0 !important;
     border: none !important;
     border-bottom: 1px solid lightgray !important;
 }
-.sideBar .list-group .list-group-item .avatar {
+.sideBar .list-group .chatroom-li .avatar {
     width: 45px;
     height: 45px;
     margin-right: 16px;
 }
 
-.sideBar .list-group .list-group-item div:nth-of-type(2) {
-    width: calc(100% - 62px);
-    height: 100%;
-}
-
-.sideBar .list-group .list-group-item div:nth-of-type(2) p {
-    display: inline;
+.sideBar .list-group .chatroom-li div:nth-of-type(2) p {
+    font-size: .8rem;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
